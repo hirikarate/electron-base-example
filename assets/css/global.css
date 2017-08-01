@@ -1,0 +1,20 @@
+#page {
+  background: transparent url("~/assets/img/snowflake-background.jpg") top left noo-repeat; }
+  #page h1 {
+    color: red; }
+
+body::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #808080;
+  opacity: 0.5; }
+
+body.blurred::before {
+  content: 'Click to dismiss me!';
+  text-align: center;
+  line-height: 500px;
+  color: #FFF;
+  font-size: 5em; }

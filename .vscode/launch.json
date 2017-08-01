@@ -1,0 +1,22 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Gulp release",
+			"program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+			"args": [
+				"release"
+			]
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Electron Main",
+			"runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+			"program": "${workspaceRoot}/main.js",
+			"protocol": "legacy"
+		}
+	]
+}

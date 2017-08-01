@@ -1,0 +1,75 @@
+{
+  "name": "electron-base-example",
+  "author": "Rein Chau",
+  "version": "0.1.0",
+  "description": "Barebone template for Electron app. Copy this template to new repo and start adding screens and functionalities.",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron ./",
+    "release": "build"
+  },
+  "build": {
+    "appId": "electron-base-example",
+    "compression": "store",
+    "directories": {
+      "output": "release"
+    },
+    "electronVersion": "1.6.11",
+    "extraFiles": [
+      {
+        "from": "assets",
+        "to": "assets",
+        "filter": [
+          "**/*",
+          "!**/*.scss"
+        ]
+      }
+    ],
+    "files": [
+      "!.vscode${/*}",
+      "!assets${/*}",
+      "!dist${/*}",
+      "!logs${/*}",
+      "!node_modules${/*}",
+      "!src${/*}",
+      "!package-lock.json",
+      "!README.md",
+      "!tsconfig.json",
+      "!tslint.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": ""
+    }
+  },
+  "dependencies": {
+    "electron-base": "git+https://github.com/hirikarate/electron-base.git#0.2.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.2.6",
+    "@types/node": "~7.0.37",
+    "del": "^2.2.2",
+    "dts-generator": "^2.1.0",
+    "electron-builder": "^19.16.0",
+    "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^3.0.0",
+    "gulp-environments": "^0.1.1",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-tslint": "^8.1.1",
+    "gulp-typescript": "^3.1.7",
+    "gulp-uglifycss": "^1.0.8",
+    "gulp-watch": "^4.3.11",
+    "gulp-watch-sequence": "^1.0.0",
+    "gulp-webpack": "^1.5.0",
+    "merge-stream": "^1.0.1",
+    "shebang-loader": "0.0.1",
+    "tslint": "^5.4.3",
+    "typescript": "^2.4.1",
+    "webpack": "^3.3.0"
+  }
+}

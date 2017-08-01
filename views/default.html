@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Default Window</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="~/assets/css/bootstrap.min.css" >
+
+	<link rel="stylesheet" href="~/assets/css/global.css" />
+</head>
+<body>
+	<div id="page">
+		<h1>Hello, world!</h1>
+	</div>
+
+	<p>
+		DefaultWindow says: <b id="fileContent"></b>
+	</p>
+	<p>
+		Main App says: <b id="mainApp"></b>
+	</p>
+	<p>
+		<button id="btnConfirm">Show a confirm dialog</button>
+	</p>
+	<p>
+		<button id="btnMessage">Show a message dialog</button>
+	</p>
+	<p>
+		<button id="btnOpen">Show an open dialog</button>
+	</p>
+
+	<!-- Insert this line above script imports  -->
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+		<!-- DEV -->
+		<script src="~/assets/js/lib/jquery-1.12.4.min.js"></script>
+		<script src="~/assets/js/lib/bootstrap-3.3.7.min.js"></script>
+		<!-- /DEV -->
+		
+		<!-- PROD /
+		<script src="../bundles/lib-bundle.js"></script>
+		<!-- /PROD -->
+
+	<!-- Insert this line after script imports -->
+	<script>if (window.module) module = window.module;</script>
+
+	<script>
+		//* DEV
+		require('../dist/renderer/DefaultScreen');
+		/* /DEV */
+
+		/*/ PROD
+		require('../bundles/frontend-bundle');
+		/* /PROD */
+	</script>
+</body>
+</html>
